@@ -1,0 +1,1 @@
+This is a simple web application made using HTML, CSS and Javascript for making todo list. The UI and functionality will improve.
