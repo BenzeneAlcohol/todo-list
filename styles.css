@@ -4,8 +4,22 @@
     box-sizing: border-box;
 }
 
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body{
-    background: linear-gradient(120deg, #ff8474, #ffc996);
+    background: url('https://media.giphy.com/media/3oEduKpA7MOGdjWd6o/giphy.gif');
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: 'Roboto', sans-serif;
     color:black;
     min-height: 100vh;
@@ -34,18 +48,26 @@ form input, form button{
 }
 
 .todo-list{
+    width:70vw;
     min-width: 30%;
 }
 
 .todo{
-    background-color: #ff8474;
+    background-color: #000000;
+    color: white;
     margin:0.5rem;
     list-style: none;
     display:flex;
     flex-direction: row;
     font-size: 1.5rem;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
+    animation:slide-up 0.8s ease;
+
+}
+
+.removed{
+  
 }
 
 .todo li{
@@ -55,17 +77,33 @@ form input, form button{
 
 
 .complete-btn, .trash-btn{
-    background: #ff5200;
+    background: #b4400a;
     padding:0.5rem;
     font-size:1.5rem;
     border:0.5rem;
     cursor:pointer;
+    margin: 5px;
+    border-radius: 5px;
 }
 
 .complete-btn{
-    background: rgb(69, 218, 69);
+    background: rgb(31, 158, 31);
 }
 
 .completed{
     text-decoration: line-through;
+    background-color:green;
+    transition: 1s ease;
+}
+
+p  , h2 , h3 , li , button.complete-btn , .trash-btn , .todo-button {
+
+    font-family: 'New Tegomin', serif;
+  }
+
+@media(max-width:768px){
+  p  , h2 , h3 , li , button.complete-btn , .trash-btn {
+    font-size:18px;
+    font-family: 'New Tegomin', serif;
+  }
 }
